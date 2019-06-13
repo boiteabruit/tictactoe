@@ -7,6 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import Garage from './Garage';
 import Game from './Game';
 import Clock from './Clock';
+import Toggle from './Toggle';
+import Mailbox from './Mailbox';
+import List from './List';
 
 
 // syntaxe jsx
@@ -34,10 +37,19 @@ import Clock from './Clock';
 
 // création classe voiture
 // extends : on hérite de la classe component définie dans React
-
-
+ReactDOM.render(<Game />, document.getElementById('root'));
+ReactDOM.render(<Toggle />, document.getElementById('popo2'));
 ReactDOM.render(<Game />, document.getElementById('root'));
 ReactDOM.render(<Clock/>, document.getElementById('popo'));
+
+const numbers=['5', '4', '3','2','1']
+
+ReactDOM.render(<List numbers={numbers}/>, document.getElementById('popo3'));
+
+
+const message =['COUCOU CA FARTE', 'CA FARTE ET TOI', 'JAI FAIM'];
+
+ReactDOM.render(<Mailbox  messagesnonlus={message}/>, document.getElementById('root3'));
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 // ReactDOM.render(myelement, document.getElementById('popo'));
